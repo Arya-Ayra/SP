@@ -1,0 +1,23 @@
+t = 0:0.0002:1;
+x = sin(2*pi*10*t);
+a=1;
+b = 4;
+y = quadratic_quant(x,b,a);
+error =  abs(x - y);
+
+subplot(2,1,1);
+histogram(error , 15);
+xlabel('error');
+ylabel('quantity');
+title('histogram for b=4');
+t = 0:0.0002:1;
+x = sin(2*pi*10*t);
+a=1;
+b = 3;
+y = quadratic_quant(x,b,a);
+error =  abs(x - y);
+subplot(2,1,2);
+histogram(error , 15);
+xlabel('error');
+ylabel('quantity');
+title('histogram for b=3');
